@@ -1,5 +1,8 @@
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-example-bucket-12312435"
+}
 
-resource "aws_s3_bucket" "tf-learn" {
-  bucket = "test-1231934812"
-  aws_s3_bucket_acl = "private"
+resource "aws_s3_bucket_acl" "example" {
+  bucket = aws_s3_bucket.example.id
+  acl    = "private"
 }
