@@ -1,9 +1,9 @@
-provider "aws"{
+provider "aws" {
   profile = "default"
   region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "tf-learn" {
-  bucket = "test-1231934812"
-  acl = "private"
+  aws_s3_bucket = "test-1231934812"
+  aws_s3_bucket_acl = "private"
 }
