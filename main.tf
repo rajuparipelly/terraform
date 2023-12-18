@@ -10,7 +10,7 @@ data "aws_ami" "api_ami" {
   }
 }
 
-resources "aws_instance" "aws" {
+resource "aws_instance" "aws" {
   ami = "data.aws_ami.app_ami.id"
   instance_type = "t3.micro"
 
