@@ -4,6 +4,6 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "tf-learn" {
-  aws_s3_bucket = "test-1231934812"
-  aws_s3_bucket_acl = "private"
+  bucket = "test-1231934812"
+  acl    = "private"
 }
